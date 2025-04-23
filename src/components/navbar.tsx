@@ -9,7 +9,7 @@ export default function Navbar() {
                 <ul className="flex space-x-8">
                     <li><a href="/" className="hover:font-bold">Work</a></li>
                     <li><a href="./#about" className="hover:font-bold">About</a></li>
-                    <li><a href="#resume" className="hover:font-bold bg-blue-400 rounded-sm p-3 text-white">Resume</a></li>
+                    <li><a href="#resume" className="hover:font-bold bg-gradient-to-r from-blue-400 to-blue-800 rounded-sm p-3 text-white">Resume</a></li>
                 </ul>
             </div>
         </div>
