@@ -14,7 +14,7 @@ export default function Home() {
           <div className="max-w-5xl w-full px-8">
               <div className="grid md:grid-cols-2 gap-10">
                 <div className="space-y-6 flex flex-col justify-center">
-                  <h2 className={cn("text-2xl md:text-3xl font-bold", heading.className)}>Hi, I'm Mofeleng,
+                  <h2 className={cn("text-2xl md:text-3xl font-bold", heading.className)}>Hi, I&apos;m Mofeleng,
                     a <ColoredText>full stack developer</ColoredText> and <ColoredText>data analyst</ColoredText> with a passion for business and technology.</h2>
                   <ul className="space-y-3">
                       <li>

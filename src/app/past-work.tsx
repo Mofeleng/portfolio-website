@@ -10,7 +10,7 @@ import PreviewProject from '@/components/preview-project';
 export default function PastWork() {
     const [ work, setWork ] = useState<Project[]>()
     const [ loading, setLoading ] = useState<boolean>(true)
-    const [ error, setError ] = useState<boolean>(false)
+    const [ error ] = useState<boolean>(false)
 
     useEffect(() => {
         const fetchData = async () => {
