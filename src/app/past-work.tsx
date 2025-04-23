@@ -1,18 +1,36 @@
-import React from 'react'
-import { base_client } from '@/lib/graphql/init'
+"use client";
+
+import React, { useEffect, useState} from 'react'
+import { getVariablePosts } from '@/lib/graphql/past-work';
+import { gql, GraphQLClient } from 'graphql-request';
+import {Project } from '@/lib/interfaces/projects';
+import Image from 'next/image';
 
 export default function PastWork() {
+    const [ work, setWork ] = useState<Project[]>()
 
+    useEffect(() => {
+        const fetchData = async () => {
+            const work = await getVariablePosts('work');
+            setWork(work);
+        }
+        fetchData()
+    }, [])
+    
   return (
-    <div className="grid md:grid-cols-2 gap-10">
-      <div className="flex flex-col gap-4">
-            <div className="">
-
-            </div>
-            <div className=''>
-
-            </div>
-      </div>
+    <div className="grid md:grid-cols-2 gap-10 mt-5 mb-12">
+    { work && work.map((project) => (
+        <div className="flex flex-col gap-4" key={project.id}>
+        <div className="">
+            <Image src={project.coverPhoto.url} alt={project.name} width={500} height={500} className="rounded-lg object-cover" />
+        </div>
+        <div className='space-y-3'>
+            <h2 className="text-3xl font-bold">{ project.name }</h2>
+            <p className=""> {project.shortDescription }</p>
+        </div>
+        </div>
+    ))}
+      
 
     </div>
   )
