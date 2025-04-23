@@ -1,6 +1,6 @@
 import { gql } from "graphql-request";
 import { base_client } from "./init";
-import { Project, CoverPhoto, GetVariablePostsResponse, GetVariablePostsVariables } from "../interfaces/projects";
+import { Project, GetVariablePostsResponse, GetVariablePostsVariables } from "../interfaces/projects";
 
 export const getVariablePosts = async (work: string): Promise<Project[]> => {
     const query = gql`

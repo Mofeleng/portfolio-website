@@ -2,10 +2,7 @@
 
 import React, { useEffect, useState} from 'react'
 import { getVariablePosts } from '@/lib/graphql/past-work';
-import { gql, GraphQLClient } from 'graphql-request';
 import {Project } from '@/lib/interfaces/projects';
-import Image from 'next/image';
-import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { heading } from '@/lib/constants/fonts';
 import PreviewProject from '@/components/preview-project';
