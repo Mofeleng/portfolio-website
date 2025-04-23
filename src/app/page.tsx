@@ -48,9 +48,9 @@ export default function Home() {
 
       <section id="projects">
         <div className="max-w-5xl w-full px-8 mx-auto">
-          <h2 className="text-2xl font-semibold">Past Work</h2>
+          <h2 className={cn("text-2xl font-semibold", heading.className)}>Past Work</h2>
           <PastWork />
-          <h2 className="text-2xl font-semibold">Projects</h2>
+          <h2 className={cn("text-2xl font-semibold", heading.className)}>Projects</h2>
           <Projects />
         </div>
       </section>

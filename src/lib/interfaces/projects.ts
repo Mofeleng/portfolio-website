@@ -8,6 +8,7 @@ export interface Project {
     slug: string;
     skills: string[];
     url: string;
+    type: string;
     coverPhoto: CoverPhoto;
     shortDescription: string;
 }

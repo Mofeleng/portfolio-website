@@ -11,6 +11,7 @@ export const getVariablePosts = async (work: string): Promise<Project[]> => {
                 slug
                 skills
                 url
+                type
                 coverPhoto {
                     url
                 }
