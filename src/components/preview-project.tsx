@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils';
 
 export default function PreviewProject({ project }: { project: Project }) {
     return (
-        <Link href={project.type == 'portfolio' ? project.url : `/project/${project.slug}`} key={project.id} target='blank'>
+        <Link href={project.url} key={project.id} target='blank'>
             <div className="flex flex-col gap-4">
                 <div className="w-full h-[260px] relative">
                     <Image 
